@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>crochet pick</title>
+		<link rel="stylesheet" href="indexcrochet.css">
+	</head>
+	<body>
+		<header class="flex">
+			<h1>Random Crochet Yarn Generator</h1>
+			<button>Generate Random Yarn</button>
+		</header>
+		<section class="flex">
+			<img src="">
+		</section>
+		<script >
+    const imageArray = [
+    	"IMG_1141.jpg",
+    	"IMG_1142.jpg",
+    	"IMG_1143.jpg",
+    	"IMG_1144.jpg",
+    	"IMG_1145.jpg",
+      "IMG_1146.jpg",
+      "IMG_1147.jpg",
+      "IMG_1148.jpg",
+      "IMG_1149.jpg",
+    ];
+
+    const image = document.querySelector("img");
+    const button = document.querySelector("button");
+
+    window.onload = () => generateRandomPicture(imageArray);
+
+    button.addEventListener("click", () => generateRandomPicture(imageArray));
+
+    function generateRandomPicture(array){
+    	let randomNum = Math.floor(Math.random() * array.length);
+    	image.setAttribute("src", array[randomNum]);
+    }
+    </script>
+	</body>
+</html>
